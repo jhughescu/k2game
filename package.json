@@ -1,0 +1,16 @@
+{
+  "name": "k2gamedev",
+  "version": "1.0.0",
+  "description": "The K2 resource game",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "j.hughes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.7.3"
+  }
+}
