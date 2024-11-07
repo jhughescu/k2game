@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src='js/tools.js'></script>
+    <script src='js/scriptadmin.js'></script>
+
+    <link rel='stylesheet' href='css/stylecommon.css'>
+</head>
+<body>
+    <h1>Admin Portal</h1>
+    {{#if error}}
+        <p style='color: red;'>Incorrect password, please try again.</p>
+    {{/if}}
+    <form action='/admin' method='POST'>
+        <label for='password'>Password:</label>
+        <input type='password' id='password' name='password' required>
+        <button type='submit'>Login</button>
+    </form>
+</body>
+</html>

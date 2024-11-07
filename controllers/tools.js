@@ -63,6 +63,18 @@ const getIPv4Address = () => {
 //    console.log(`ipv4Address: ${ipv4Address}`)
     return ipv4Address || false;
 };
+const padNum = (n, r) => {
+    const rr = r ? r : 10;
+    let pre = '';
+    for (let i = 1; i < rr.toString().length; i++) {
+        pre += '0';
+    }
+    if (n < rr) {
+        return `${pre}${n.toString()}`
+    } else {
+        return n;
+    }
+};
 const getTimeStamp = () => {
     const d = new Date();
     const ts = `timestamp: ${d.getFullYear()}${padNum(d.getMonth())}${padNum(d.getDay())} ${padNum(d.getHours())}:${padNum(d.getMinutes())}:${padNum(d.getSeconds())}`;
@@ -72,6 +84,7 @@ module.exports = {
     procVal,
     toCamelCase,
     justNumber,
+    padNum,
     roundNumber,
     isValidJSON,
     getIPv4Address,
